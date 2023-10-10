@@ -11,7 +11,7 @@
 
 </head>
 
-<body>
+<body style="overflow-x: hidden;">
 
     <!-- ======= Top Bar ======= -->
     <!-- <section id="topbar" class="d-flex align-items-center">
@@ -42,7 +42,7 @@
                 <ul>
                     <li><a class="nav-link scrollto" href="#about">About</a></li>
                     <li><a class="nav-link scrollto" href="#services">Services</a></li>
-                    <li><a class="nav-link scrollto " href="#portfolio">Code</a></li>
+                    <li><a class="nav-link scrollto " href="#team">Team</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
@@ -68,7 +68,8 @@
     <main id="main">
 
         <!-- ======= About Section ======= -->
-        <section id="about" class="about section-bg">
+        <p id="about"></p>
+        <section class="about section-bg">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
@@ -186,6 +187,7 @@
 
         <!-- ======= Team Section ======= -->
         <!-- <section id="team" class="team section-bg"> -->
+        <p id="team"></p>
         <div class="container" data-aos="fade-up" style="margin-top: 40px;">
 
             <div class="section-title">
@@ -239,13 +241,9 @@
             <!-- End Team Section -->
 
             <!-- ======= Contact Section ======= -->
-            <section id="contact" class="contact">
-                <div class="container" data-aos="fade-up">
-                    <div class="section-title">
-                        <h3>Contact Us</h3>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 mx-auto">
+            <!-- <section id="contact" class="contact">
+                <div class="row">
+                    <div class="col-lg-6 mx-auto">
                             <form action="mailto:ryan.lagasse@uconn.edu" method="post" role="form"
                                 class="php-email-form">
                                 <div class="form-group">
@@ -254,10 +252,26 @@
                                 </div>
                                 <div class="text-center"><button type="submit">Send Message</button></div>
                             </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                        </div> 
+            </section>-->
+            <p id="contact">
+            </p>
+            <iframe id="myIframe"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSdRHTqxMCp5-pLTBwMuYOh-ijcQLKhQYYs42z1cFkliFc2YQw/viewform?embedded=true"
+                width="0" height="0" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <!-- changes the form to match the width and height of the webpage -->
+            <script>
+                function resizeIframe() {
+                    var iframe = document.getElementById("myIframe");
+                    var width = window.innerWidth;
+                    var height = window.innerHeight;
+                    iframe.style.width = width + "px";
+                    iframe.style.height = height + "px";
+                }
+
+                window.addEventListener("resize", resizeIframe);
+                resizeIframe();
+            </script>
 
 
 
