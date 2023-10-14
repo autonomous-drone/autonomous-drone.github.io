@@ -193,18 +193,22 @@
               </div>
               <div class="row">
                 <div class="col-lg-6 mx-auto">
-                    <form action="mailto:ryan.lagasse@uconn.edu" method="post" role="form" class="php-email-form">
-                    <div class="form-group">
-                      <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="text-center"><button type="submit">Send Message</button></div>
-                  </form>
+                  <button id="show-form-btn" class="btn btn-primary btn-lg" style="background-color: #f2f2f2; color: #333; display: block; margin: 0 auto;">Contact Our Team</button>
+                  <iframe id="contact-form" src="" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0" style="display: none;">Loading…</iframe>
                 </div>
               </div>
             </div>
           </section>
 
-
+          <script>
+            const showFormBtn = document.getElementById('show-form-btn');
+            const contactForm = document.getElementById('contact-form');
+            showFormBtn.addEventListener('click', () => {
+              contactForm.src = 'https://docs.google.com/forms/d/e/1FAIpQLScdxWxcSvjuFkxB6jMtBqFq0XNBPMaKgChwfMF-yWMk3sq2-Q/viewform?embedded=true';
+              contactForm.style.display = 'block';
+              showFormBtn.style.display = 'none';
+            });
+          </script>
 
 
     </main><!-- End #main -->
